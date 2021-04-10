@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2f7a4fb3-5266-451e-9f74-7ec5625f5957" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/InterfaceManager/VisitorAvatarFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SettingsManager/IOnLoad.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/InterfaceManager/InterfaceManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/InterfaceManager/IInterfaceManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SettingsManager/IOnLoadSettings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/GameFolder/GraficsPreset_SO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/InterfaceManager/IOnSettingsButtonPress.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation.Editor/SceneStateFactory.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/InterfaceManager/VisitorAvatar.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/VisitorInFocusScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/IOnDayBegin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SettingsManager/ISettingsManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/IVisitorInFocusScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SettingsManager/SettingsManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/VisitorInFocusButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/InterfaceManager/IOnNextDayButtonPress.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/IOnTimerChanged.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/IOnDayEnd.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SettingsManager/IOnSave.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/VisitorsComponents_SO.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SceneStateManager/Utility/PushStateOnKeyPress.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation.Editor/SceneStateFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Game/VisitorsSO.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/IInterfaceManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/IOnTimerChanged.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/InterfaceManager/IOnPauseButtonPress.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/InterfaceManager/IOnNextDayButtonPress.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/InterfaceManager/IOnSettingsButtonPress.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/TimeScaleManager/TimeScaleHandle.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/InterfaceManager/VisitorAvatarScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/InterfaceManager/VisitorAvatarFactory.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Game/VisitorInFocusButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SceneStateManager/Utility/PushStateButton.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Game/IVisitorInFocusScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Game/VisitorInFocusScript.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Game/VisitorsComponents_SO.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SettingsManager/IOnSave.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SettingsManager/IOnLoad.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/Visitor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Utility/DebugOnly.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/InterfaceManager/VisitorAvatar.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/IGameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameFolder/GraficsPreset.cs" />
+      <option value="$PROJECT_DIR$/Assets/GameFolder/GraficsPreset_SO.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SettingsManager/IOnLoadSettings.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SettingsManager/ISettingsManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SettingsManager/SettingsManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/IOnDayBegin.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/IOnDayEnd.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/InterfaceManager/InterfaceManager.cs" />
+    </changedPaths>
+  </component>
+  <component name="ProjectId" id="1qiMLQbyv7E1DRjdKjsfIW7ygmB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2f7a4fb3-5266-451e-9f74-7ec5625f5957" name="Default Changelist" comment="" />
+      <created>1617557903200</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1617557903200</updated>
+      <workItem from="1617557911392" duration="4000" />
+      <workItem from="1617557969799" duration="11000" />
+      <workItem from="1617558244642" duration="4700000" />
+      <workItem from="1617568935360" duration="192000" />
+      <workItem from="1617618644427" duration="1156000" />
+      <workItem from="1617638500145" duration="5072000" />
+      <workItem from="1617643806531" duration="15219000" />
+      <workItem from="1617706201002" duration="6000" />
+      <workItem from="1617723853354" duration="3996000" />
+      <workItem from="1617727921942" duration="4991000" />
+      <workItem from="1617814800872" duration="11912000" />
+      <workItem from="1617828706351" duration="2629000" />
+      <workItem from="1617831506192" duration="114000" />
+      <workItem from="1617831657565" duration="3124000" />
+      <workItem from="1617898869059" duration="2162000" />
+      <workItem from="1617936998007" duration="6898000" />
+      <workItem from="1617985105587" duration="18228000" />
+      <workItem from="1618030052006" duration="1963000" />
+      <workItem from="1618032221210" duration="949000" />
+      <workItem from="1618033351802" duration="2316000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
