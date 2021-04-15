@@ -12,11 +12,11 @@ namespace Game
 {
     public sealed class SettingsManager : AbstractService<ISettingsManager>, ISettingsManager
     {
-        public enum Language
-        {
-            russian,
-            english
-        }
+        // public enum Language
+        // {
+        //     russian,
+        //     english
+        // }
         
         public enum GraficPreset
         {
@@ -25,9 +25,9 @@ namespace Game
             Low
         }
 
-       
+        [Inject] ILocalizationManager _localizationManager = default;
 
-        public Language CurrentLanguage { get; set; }
+        //public Language CurrentLanguage { get; set; }
         
         public ScriptableObject[] graficsPresets;
         public ScriptableObject[] GraficsPresets
@@ -49,8 +49,9 @@ namespace Game
         static private string   _saveFilePath;
         static private string   _settingsFilePath;
 
-        [Inject] private IGameManager _gameManager;
-        
+        [Inject] IGameManager _gameManager =default;
+        [Inject] private ISoundManager _soundManager = default;
+
 
         void Start()
         {
@@ -137,12 +138,14 @@ namespace Game
             switch (languageIndex)
             {
                 case 0:
-                    CurrentLanguage = Language.russian;
-                    Debug.Log("Current language is " + Language.russian);
+                    _localizationManager.CurrentLanguage = Language.Russian;
+                    //CurrentLanguage = Language.Russian;
+                    Debug.Log("Current language is " + Language.Russian);
                     break;
                 case 1:
-                    CurrentLanguage = Language.english;
-                    Debug.Log("Current language is " + Language.english);
+                    _localizationManager.CurrentLanguage = Language.English;
+                    //CurrentLanguage = Language.English;
+                    Debug.Log("Current language is " + Language.English);
                     break;
             }
 
@@ -152,7 +155,8 @@ namespace Game
 
         public void SaveSettings()
         {
-            _settingsFile.Language = CurrentLanguage;
+            //_settingsFile.Language = (int)_localizationManager.CurrentLanguage;
+            _settingsFile.CurrentLanguage = (int)_localizationManager.CurrentLanguage;
             _settingsFile.GraficsPreset = CurrentGraficsPreset;
             _settingsFile.MusicVolume = MusicVolume;
             _settingsFile.SoundVolume = SoundVolume;
@@ -184,14 +188,20 @@ namespace Game
                     return;
                 }
 
-                CurrentLanguage = _settingsFile.Language;
+                _localizationManager.CurrentLanguage = (Language)_settingsFile.CurrentLanguage;
                 CurrentGraficsPreset = _settingsFile.GraficsPreset;
                 MusicVolume = _settingsFile.MusicVolume;
                 SoundVolume = _settingsFile.SoundVolume;
+                
+                _soundManager.GetChannel("Music").Volume = MusicVolume;
+                _soundManager.GetChannel("Sfx").Volume = SoundVolume;
            
                 Debug.Log("Settings was loaded");
 
                 foreach (var observer in OnLoadSettings.Enumerate())
+                    observer.Do();
+                
+                foreach (var observer in _localizationManager.OnLanguageChanged.Enumerate())
                     observer.Do();
             }
             else
@@ -216,6 +226,8 @@ public class SettingsFile
 {
     public float MusicVolume;
     public float SoundVolume;
-    public SettingsManager.Language Language;
+    //public SettingsManager.Language Language;
+    //public Language Language;
+    public int CurrentLanguage;
     public ScriptableObject GraficsPreset;
 }

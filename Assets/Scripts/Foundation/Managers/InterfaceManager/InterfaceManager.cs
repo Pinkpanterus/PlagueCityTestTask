@@ -12,25 +12,25 @@ namespace Game
 {
     sealed class InterfaceManager : AbstractService<IInterfaceManager>, IInterfaceManager, IOnDayBegin, IOnDayEnd, IOnTimerChanged,IOnLoadGame, IOnLoadSettings
     {
-        
+        [Inject] ILocalizationManager _localizationManager = default;
         [Inject] IGameManager _gameManager = default;
         [Inject] ISettingsManager _settingsManager = default;
         [Inject] ITimeScaleManager _timeScaleManager = default;
         TimeScaleHandle timeScaleHandle;
         
         [Inject] ISceneStateManager _iSceneStateManager = default;
+        [Inject] ISoundManager _soundManager = default;
+        
         public SceneState _settingsMenuState;
 
         [Header("Cabinet interface")]
         public Button PauseButton;
         public Button NextDayButton;
         public Button SettingsButton;
+        public Button AppQuitButton;
         
-        public Button SaveButton;
-        public Button LoadButton;
-
         public Text TimerText;
-        public Text DayText;
+        public Text DayNumberText;
         
         public Image FadeImage;
 
@@ -39,6 +39,14 @@ namespace Game
         public Dropdown GraficPresetSelector;
         public Slider MusicVolumeSlider;
         public Slider SoundVolumeSlider;
+        public Button SaveButton;
+        public Button LoadButton;
+
+        [Header("Sound")] 
+        public AudioClip ButtonClickSound;
+        public AudioClip BackGroundMusic;
+        
+
         
         public ObserverList<IOnPauseButtonPress> OnPauseButtonPress { get; } = new ObserverList<IOnPauseButtonPress>();
         public ObserverList<IOnNextDayButtonPress> OnNextDayButtonPress { get; } = new ObserverList<IOnNextDayButtonPress>();
@@ -52,9 +60,23 @@ namespace Game
             Observe(_gameManager.OnTimerChanged);
             Observe(_settingsManager.OnLoadGame);
             Observe(_settingsManager.OnLoadSettings);
+
+            void PlayButtonClickSound()
+            {
+                _soundManager.Sfx.Play(ButtonClickSound);
+            }
+
+            SaveButton.onClick.AddListener(() =>
+            {
+                _settingsManager.SaveGame();
+                PlayButtonClickSound();
+            });
             
-            SaveButton.onClick.AddListener(() => _settingsManager.SaveGame());
-            LoadButton.onClick.AddListener(() => _settingsManager.LoadGame());
+            LoadButton.onClick.AddListener(() =>
+            {
+                _settingsManager.LoadGame();
+                PlayButtonClickSound();
+            });
             
             MusicVolumeSlider.onValueChanged.AddListener (delegate {MusicVolumeChanged();});
             SoundVolumeSlider.onValueChanged.AddListener (delegate {SoundVolumeChanged();});
@@ -65,6 +87,8 @@ namespace Game
             
             NextDayButton.onClick.AddListener(() =>
             {
+                PlayButtonClickSound();
+                    
                 foreach (var it in OnNextDayButtonPress.Enumerate())
                     it.Do();
                 _gameManager.EndDay();
@@ -72,6 +96,8 @@ namespace Game
             
             PauseButton.onClick.AddListener(() =>
             {
+                PlayButtonClickSound();
+                
                 float scale = 0.0f;
                 
                 if (timeScaleHandle == null)
@@ -86,8 +112,16 @@ namespace Game
                     it.Do();
             });
             
+            AppQuitButton.onClick.AddListener(()=>
+            {
+                Application.Quit();
+                PlayButtonClickSound();
+            });
+            
             SettingsButton.onClick.AddListener(() =>
             {
+                PlayButtonClickSound();
+                
                 _iSceneStateManager.Push(_settingsMenuState);
 
                 foreach (var it in OnSettingsButtonPress.Enumerate())
@@ -96,10 +130,12 @@ namespace Game
             
             LanguageSelector.GetComponent<Dropdown>().onValueChanged.AddListener(delegate {
                _settingsManager.ChangeLanguage(LanguageSelector.GetComponent<Dropdown>().value);
+               //PlayButtonClickSound();
             });
             
             GraficPresetSelector.GetComponent<Dropdown>().onValueChanged.AddListener(delegate {
                 _settingsManager.ChangeGraficPreset(GraficPresetSelector.GetComponent<Dropdown>().value);
+                //PlayButtonClickSound();
             });
         }
 
@@ -107,12 +143,14 @@ namespace Game
         {
             _settingsManager.SoundVolume = SoundVolumeSlider.value;
             _settingsManager.SaveSettings();
+            _soundManager.GetChannel("Sfx").Volume = _settingsManager.SoundVolume;
         }
 
         private void MusicVolumeChanged()
         {
             _settingsManager.MusicVolume = MusicVolumeSlider.value;
             _settingsManager.SaveSettings();
+            _soundManager.GetChannel("Music").Volume = _settingsManager.MusicVolume;
         }
 
         public void ShowTimer()
@@ -124,7 +162,7 @@ namespace Game
 
         public void ShowDay()
         {
-            DayText.text = "День " + _gameManager.Day.ToString();
+            DayNumberText.text = _gameManager.Day.ToString();
         }
 
         async Task IOnDayBegin.Do()
@@ -151,7 +189,8 @@ namespace Game
 
         void RestoreSettingInMenuAfterLoad()
         {
-            LanguageSelector.value =(int)_settingsManager.CurrentLanguage;
+            //LanguageSelector.value =(int)_settingsManager.CurrentLanguage;
+            LanguageSelector.value =(int)_localizationManager.CurrentLanguage;
             GraficPresetSelector.value = _settingsManager.GraficsPresets.IndexOf(_settingsManager.CurrentGraficsPreset);
             MusicVolumeSlider.value = _settingsManager.MusicVolume;
             SoundVolumeSlider.value = _settingsManager.SoundVolume;

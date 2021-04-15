@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7aae69a03b412740baaca18cb42b2f4, type: 3}
+  m_Name: VisitorsLocalizedComponents
+  m_EditorClassIdentifier: 
+  Names:
+  - Name:
+      LocalizationID: ANYA
+    isFemale: 1
+  - Name:
+      LocalizationID: BOGDAN
+    isFemale: 0
+  - Name:
+      LocalizationID: GALINA
+    isFemale: 1
+  - Name:
+      LocalizationID: KOLYA
+    isFemale: 0
+  - Name:
+      LocalizationID: NASTYA
+    isFemale: 1
+  - Name:
+      LocalizationID: OLEG
+    isFemale: 0
+  - Name:
+      LocalizationID: OLYA
+    isFemale: 1
+  - Name:
+      LocalizationID: SERGEY
+    isFemale: 0
+  - Name:
+      LocalizationID: VASYA
+    isFemale: 0
+  - Name:
+      LocalizationID: VERA
+    isFemale: 1
+  Surnames:
+  - LocalizationID: BARANOV
+  - LocalizationID: KOSHKIN
+  - LocalizationID: KRASNOV
+  - LocalizationID: KUZNETSOV
+  - LocalizationID: OBOEV
+  - LocalizationID: SARAEV
+  - LocalizationID: TAPOCHKIN
+  - LocalizationID: TOPOROV
+  - LocalizationID: TSVETKOV
+  - LocalizationID: VASIN
+  Replics:
+  - LocalizationID: EVERYONE_IS_DANCING
+  - LocalizationID: I_WILL_COMPLAIN
+  - LocalizationID: STOP_IT
+  - LocalizationID: WHAT_IS_HAPPENING?
+  - LocalizationID: WHAT_IS_PROPOSAL
+  - LocalizationID: WHERE_AM_I
+  - LocalizationID: WRONG_SEWERAGE
+  - LocalizationID: YOU_WILL_BE_JAILED
+  - LocalizationID: HAPPY_NY
+  - LocalizationID: TSOY_JIV
+  Portraits:
+  - Portrait: {fileID: 21300000, guid: bdfe0eaa33fe7f64db3d64394febd30d, type: 3}
+    isFemale: 1
+  - Portrait: {fileID: 21300000, guid: b4465e052138b2e42a5cde906d862909, type: 3}
+    isFemale: 1
+  - Portrait: {fileID: 21300000, guid: 59363675a98bcf64492eb11ec98e9aec, type: 3}
+    isFemale: 0
+  - Portrait: {fileID: 21300000, guid: 82b40aa3e9246344ea118f97f0fddff6, type: 3}
+    isFemale: 0
+  - Portrait: {fileID: 21300000, guid: de1513ed9f6185c40ae2e6582118a29c, type: 3}
+    isFemale: 1
+  - Portrait: {fileID: 21300000, guid: 9b8067955f4c6a8498767be6564d8f93, type: 3}
+    isFemale: 1
+  - Portrait: {fileID: 21300000, guid: ba2a9d5e5ff6ebd40abd8a95c0346f36, type: 3}
+    isFemale: 0
+  - Portrait: {fileID: 21300000, guid: c7d1ed6483168624687bb08e067b1c92, type: 3}
+    isFemale: 0
+  - Portrait: {fileID: 21300000, guid: b242c71ab38efa64da36142e7dbb5591, type: 3}
+    isFemale: 0
+  - Portrait: {fileID: 21300000, guid: 90b733bec54513140bd33bd4488cb802, type: 3}
+    isFemale: 1

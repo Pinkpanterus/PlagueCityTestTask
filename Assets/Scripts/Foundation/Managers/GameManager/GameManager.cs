@@ -16,10 +16,12 @@ namespace Game
     {
         [Inject] ISceneState state = default;
         [Inject] VisitorAvatar.Factory _visitorAvatarFactory = default;
+        [Inject] private ILocalizationManager _localizationManager = default;
         
         public int VisitorsInRowCount = 5;
         public float SecondsPerDay = 180;
         public VisitorsComponents_SO visitorsComponentsSo;
+        
 
         public ObserverList<IOnDayBegin> OnNewDayBegin { get; } = new ObserverList<IOnDayBegin>();
         public ObserverList<IOnDayEnd> OnDayEnd { get; } = new ObserverList<IOnDayEnd>();
@@ -84,8 +86,8 @@ namespace Game
                Debug.Log("Visitors component`s length are no equal. Check it!");
 
            List<NameUnit> _namesList = so.Names.ToList();
-           List<string> _surnamesList = so.Surnames.ToList();
-           List<string> _replicsList = so.Replics.ToList();
+           List<LocalizedString> _surnamesList = so.Surnames.ToList();
+           List<LocalizedString> _replicsList = so.Replics.ToList();
            List<PortraitUnit> _portraitsList = so.Portraits.ToList();
            List<PortraitUnit> alreadyUsedPortrats = new List<PortraitUnit>();
            
@@ -111,7 +113,7 @@ namespace Game
                    var _femailNames = _namesList.Where(x => x.isFemale).ToList();
                    var rndNames = Random.Range(0, _femailNames.Count);
                    NameUnit _name = _femailNames[rndNames];
-                   visitor.Name = _name.Name;
+                   visitor.Name = _localizationManager.GetString(_name.Name);
                    _namesList.Remove(_name);
                }
                else
@@ -119,20 +121,21 @@ namespace Game
                    var _mailNames = _namesList.Where(x => !x.isFemale).ToList();
                    var rndNames = Random.Range(0, _mailNames.Count);
                    NameUnit _name = _mailNames[rndNames];
-                   visitor.Name = _name.Name;
+                   visitor.Name = _localizationManager.GetString(_name.Name);
                    _namesList.Remove(_name);
                }
                
                var rndSurNames = Random.Range(0, _surnamesList.Count);
+          
                if (isFemale)
-                   visitor.SurName = _surnamesList[rndSurNames] + "а";
+                   visitor.SurName = _localizationManager.GetString(_surnamesList[rndSurNames])  + "a";
                else
-                   visitor.SurName = _surnamesList[rndSurNames];
+                   visitor.SurName = _localizationManager.GetString(_surnamesList[rndSurNames]);
                _surnamesList.RemoveAt(rndSurNames);
 
 
                var rndReplics = Random.Range(0, _replicsList.Count);
-               visitor.Replic = _replicsList[rndReplics];
+               visitor.Replic = _localizationManager.GetString(_replicsList[rndReplics]);
                _replicsList.RemoveAt(rndReplics);
 
                _preparedVisitors.Add(visitor);
@@ -197,7 +200,7 @@ namespace Game
                 
                 _visitorAvatar.VisitorInfo = VisitorsInRowThisDay[i];
                 _visitorAvatar.Portrait.sprite = VisitorsInRowThisDay[i].Portrait;
-                _visitorAvatar.NameText.text = VisitorsInRowThisDay[i].Name;
+                _visitorAvatar.NameText.text = VisitorsInRowThisDay[i].Name.ToString();
                 _visitorAvatar.SurnameText.text = VisitorsInRowThisDay[i].SurName;
             }
         }

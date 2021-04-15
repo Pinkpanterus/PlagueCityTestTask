@@ -6,7 +6,7 @@ namespace Game
 {
     public interface ISettingsManager
     {
-        SettingsManager.Language CurrentLanguage { get; set; }
+        //SettingsManager.Language CurrentLanguage { get; set; }
         ScriptableObject[] GraficsPresets { get; set; }
         ScriptableObject CurrentGraficsPreset{ get; set; }
 

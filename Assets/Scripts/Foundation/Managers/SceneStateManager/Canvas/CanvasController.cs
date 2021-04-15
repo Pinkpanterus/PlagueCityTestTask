@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using Zenject;
 
+
 namespace Foundation
 {
     public sealed class CanvasController : AbstractBehaviour,
@@ -64,6 +65,8 @@ namespace Foundation
             Canvas.sortingOrder = order;
         }
 
+        
+#if UNITY_EDITOR
         [UnityEditor.Callbacks.PostProcessScene(0)]
         static void RemoveCamera()
         {
@@ -77,5 +80,6 @@ namespace Foundation
                 }
             }
         }
+#endif
     }
 }

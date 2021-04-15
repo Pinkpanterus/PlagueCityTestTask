@@ -286,6 +286,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b1733b67c63b7244bfb055bbf05b012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  VisitorInfo:
+    Name: 
+    SurName: 
+    Replic: 
+    Portrait: {fileID: 0}
   VisitorAvatarButton: {fileID: 6807135705196995292}
   NameText: {fileID: 1539273592162760498}
   SurnameText: {fileID: 1539273591531815308}
@@ -377,6 +382,7 @@ GameObject:
   - component: {fileID: 3219587783275458079}
   - component: {fileID: 182434942128958884}
   - component: {fileID: 6807135705196995292}
+  - component: {fileID: 6815170157327037849}
   m_Layer: 0
   m_Name: Button
   m_TagString: Untagged
@@ -485,3 +491,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &6815170157327037849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8605329983131599937}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8c355889aeefed4b833cfee432045dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sound: {fileID: 8300000, guid: 70e02441ad3cd8f488092b6a4933e446, type: 3}

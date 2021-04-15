@@ -18,8 +18,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/InterfaceManager/VisitorAvatarFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SettingsManager/IOnLoad.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/InterfaceManager/InterfaceManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/InterfaceManager/IInterfaceManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SettingsManager/IOnLoadSettings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
@@ -27,17 +27,15 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/InterfaceManager/IOnSettingsButtonPress.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation.Editor/SceneStateFactory.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/InterfaceManager/VisitorAvatar.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/VisitorInFocusScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/IOnDayBegin.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation.Editor/Config/AbstractConfigImporter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SettingsManager/ISettingsManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/IVisitorInFocusScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SettingsManager/SettingsManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/VisitorInFocusButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/IGameManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/InterfaceManager/IOnNextDayButtonPress.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/IOnTimerChanged.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/IOnDayEnd.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SettingsManager/IOnSave.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/VisitorsComponents_SO.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/IOnDayEnd.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -56,21 +54,29 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SceneStateManager/Utility/PushStateButton.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Game/IVisitorInFocusScript.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Game/VisitorInFocusScript.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Game/VisitorsComponents_SO.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SettingsManager/IOnSave.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SettingsManager/IOnLoad.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/Visitor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Utility/DebugOnly.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/InterfaceManager/VisitorAvatar.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/IGameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/GameFolder/GraficsPreset.cs" />
       <option value="$PROJECT_DIR$/Assets/GameFolder/GraficsPreset_SO.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SettingsManager/IOnLoadSettings.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SettingsManager/ISettingsManager.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SettingsManager/SettingsManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/IOnDayBegin.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/IOnDayEnd.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation.Editor/Config/AbstractConfigImporter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation.Editor/Config/LocalizationImporter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SettingsManager/ISettingsManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/LocalizationManager/Language.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Game/VisitorsLocalisedComponents_SO1.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Game/VisitorsLocalisedComponents_SO.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Game/VisitorsComponents_SO.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/LocalizationManager/ILocalizationManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/LocalizationManager/LocalizedString.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/Visitor.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/GameManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SceneStateManager/Canvas/CanvasController.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SettingsManager/SettingsManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/InterfaceManager/InterfaceManager.cs" />
     </changedPaths>
   </component>
@@ -113,6 +119,17 @@
       <workItem from="1618030052006" duration="1963000" />
       <workItem from="1618032221210" duration="949000" />
       <workItem from="1618033351802" duration="2316000" />
+      <workItem from="1618247469558" duration="5296000" />
+      <workItem from="1618329687483" duration="786000" />
+      <workItem from="1618417645494" duration="1844000" />
+      <workItem from="1618421408211" duration="2476000" />
+      <workItem from="1618425356369" duration="4395000" />
+      <workItem from="1618430554700" duration="543000" />
+      <workItem from="1618431201961" duration="402000" />
+      <workItem from="1618431704261" duration="1656000" />
+      <workItem from="1618434567189" duration="2504000" />
+      <workItem from="1618498413287" duration="594000" />
+      <workItem from="1618501248519" duration="2671000" />
     </task>
     <servers />
   </component>
