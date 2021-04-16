@@ -43,6 +43,8 @@ namespace Game
         
         
         private int _day;
+        private bool isGameStarted;
+        private bool isTimeStoped;
         public int Day { get { return _day;} set {_day = value;}}
         
 
@@ -50,7 +52,6 @@ namespace Game
         public float DayTimeLeft { get { return _dayTimeLeft;} set {_dayTimeLeft = value;}}
         
       
-
         protected override void OnEnable()
         {
             base.OnEnable();
@@ -61,18 +62,24 @@ namespace Game
         void IOnStateActivate.Do()
         {
             CreateVisitorsList(visitorsComponentsSo);
-
-            StartNewDay();
         }
-        
+
+        void Start()
+        {
+            Invoke("StartNewDay", 0.05f);
+        }
+
         void IOnUpdate.Do(float deltaTime)
         {
+            if(!isGameStarted || isTimeStoped)
+                return;
+            
             DayTimeLeft -= deltaTime;
             
             foreach (var it in OnTimerChanged.Enumerate())
                 it.Do();
            
-            if ( DayTimeLeft < 0 )
+            if ( DayTimeLeft <= 0 )
             {
                 EndDay();
             }
@@ -144,6 +151,12 @@ namespace Game
 
         public void StartNewDay()
         {
+            if(!isGameStarted)
+                isGameStarted = true;
+            
+            if(isTimeStoped)
+                isTimeStoped = false;
+            
             ++Day;
             DayTimeLeft = SecondsPerDay;
             
@@ -178,6 +191,9 @@ namespace Game
 
         public void EndDay()
         {
+            isTimeStoped = true;
+            _dayTimeLeft = 0;
+            
             VisitorInFocus = null;
 
             DeleteVisitorAvatarCreated();
@@ -188,7 +204,6 @@ namespace Game
             foreach (var it in OnDayEnd.Enumerate())
                 it.Do();
             
-            //StartNewDay();
         }
 
         public void CreateVisitorAvatars()

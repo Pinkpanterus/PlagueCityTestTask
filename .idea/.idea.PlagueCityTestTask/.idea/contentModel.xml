@@ -686,13 +686,6 @@
             <e p="SceneStateFactory.cs" t="Include" />
           </e>
         </e>
-        <e p="Sounds" t="Include">
-          <e p="Free Pack" t="Include">
-            <e p="Rock Loops Pack" t="Include">
-              <e p="Unity Readme.txt" t="Include" />
-            </e>
-          </e>
-        </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Examples &amp; Extras" t="Include">
             <e p="Fonts" t="Include">

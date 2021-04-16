@@ -1054,7 +1054,9 @@ MonoBehaviour:
   SaveButton: {fileID: 1060812910}
   LoadButton: {fileID: 656007703}
   ButtonClickSound: {fileID: 8300000, guid: 5ed9970e17bfee943a6dff056dc3a9d0, type: 3}
-  BackGroundMusic: {fileID: 8300000, guid: 80dcc15525bad0a4b8c6419cac4b1150, type: 3}
+  BackGroundMusic: {fileID: 8300000, guid: c5a6af7adb029df4ba0967bc4de9e7ac, type: 3}
+  TimerSound: {fileID: 8300000, guid: 0e6d4d48fef8bd34f9a18cc6b7ed156c, type: 3}
+  DayEndSound: {fileID: 8300000, guid: 19ee23220d478354ca29f732069ff0d0, type: 3}
 --- !u!1 &272360057
 GameObject:
   m_ObjectHideFlags: 0

@@ -74,9 +74,9 @@
       <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/LocalizationManager/ILocalizationManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/LocalizationManager/LocalizedString.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/Visitor.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SceneStateManager/Canvas/CanvasController.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/SettingsManager/SettingsManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/GameManager/GameManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Foundation/Managers/InterfaceManager/InterfaceManager.cs" />
     </changedPaths>
   </component>
@@ -130,6 +130,7 @@
       <workItem from="1618434567189" duration="2504000" />
       <workItem from="1618498413287" duration="594000" />
       <workItem from="1618501248519" duration="2671000" />
+      <workItem from="1618589890803" duration="9026000" />
     </task>
     <servers />
   </component>

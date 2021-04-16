@@ -34,6 +34,8 @@ namespace Game
         
         public Image FadeImage;
 
+        private int _lastTimerSec;
+    
         [Header("Settings interface")] 
         public Dropdown LanguageSelector;
         public Dropdown GraficPresetSelector;
@@ -45,8 +47,8 @@ namespace Game
         [Header("Sound")] 
         public AudioClip ButtonClickSound;
         public AudioClip BackGroundMusic;
-        
-
+        public AudioClip TimerSound;
+        public AudioClip DayEndSound;
         
         public ObserverList<IOnPauseButtonPress> OnPauseButtonPress { get; } = new ObserverList<IOnPauseButtonPress>();
         public ObserverList<IOnNextDayButtonPress> OnNextDayButtonPress { get; } = new ObserverList<IOnNextDayButtonPress>();
@@ -60,7 +62,9 @@ namespace Game
             Observe(_gameManager.OnTimerChanged);
             Observe(_settingsManager.OnLoadGame);
             Observe(_settingsManager.OnLoadSettings);
-
+            
+            _lastTimerSec = Mathf.FloorToInt(_gameManager.DayTimeLeft % 60);
+           
             void PlayButtonClickSound()
             {
                 _soundManager.Sfx.Play(ButtonClickSound);
@@ -130,13 +134,16 @@ namespace Game
             
             LanguageSelector.GetComponent<Dropdown>().onValueChanged.AddListener(delegate {
                _settingsManager.ChangeLanguage(LanguageSelector.GetComponent<Dropdown>().value);
-               //PlayButtonClickSound();
             });
             
             GraficPresetSelector.GetComponent<Dropdown>().onValueChanged.AddListener(delegate {
                 _settingsManager.ChangeGraficPreset(GraficPresetSelector.GetComponent<Dropdown>().value);
-                //PlayButtonClickSound();
             });
+        }
+        
+        void PlayTimerSound()
+        {
+            _soundManager.Sfx.Play(TimerSound,false,false,1f);
         }
 
         private void SoundVolumeChanged()
@@ -155,9 +162,17 @@ namespace Game
 
         public void ShowTimer()
         {
-            int min = Mathf.FloorToInt(_gameManager.DayTimeLeft / 60);
-            int sec = Mathf.FloorToInt(_gameManager.DayTimeLeft % 60);
-            TimerText.text = min.ToString("00") + ":" + sec.ToString("00");
+            if (_gameManager.DayTimeLeft >= 0)
+            {
+                int min = Mathf.FloorToInt(_gameManager.DayTimeLeft / 60);
+                int sec = Mathf.FloorToInt(_gameManager.DayTimeLeft % 60);
+                TimerText.text = min.ToString("00") + ":" + sec.ToString("00");
+           
+            if(sec != _lastTimerSec)
+                PlayTimerSound();
+            
+            _lastTimerSec = sec;
+            }
         }
 
         public void ShowDay()
@@ -180,6 +195,7 @@ namespace Game
         void IOnTimerChanged.Do()
         {
             ShowTimer();
+            
         }
 
         void IOnLoadGame.Do()
@@ -199,6 +215,11 @@ namespace Game
         void IOnLoadSettings.Do()
         {
             RestoreSettingInMenuAfterLoad();
+        }
+
+        void Start()
+        {
+            _soundManager.Music.Play(BackGroundMusic, true, false, 0.1f);
         }
 
     }

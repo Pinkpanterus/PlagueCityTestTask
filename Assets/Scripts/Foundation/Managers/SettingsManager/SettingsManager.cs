@@ -10,14 +10,8 @@ using UnityEngine.UI;
 
 namespace Game
 {
-    public sealed class SettingsManager : AbstractService<ISettingsManager>, ISettingsManager
+    public sealed class SettingsManager : AbstractService<ISettingsManager>, ISettingsManager,IOnStateActivate
     {
-        // public enum Language
-        // {
-        //     russian,
-        //     english
-        // }
-        
         public enum GraficPreset
         {
             High,
@@ -26,8 +20,7 @@ namespace Game
         }
 
         [Inject] ILocalizationManager _localizationManager = default;
-
-        //public Language CurrentLanguage { get; set; }
+        [Inject] ISceneState state = default;
         
         public ScriptableObject[] graficsPresets;
         public ScriptableObject[] GraficsPresets
@@ -51,17 +44,22 @@ namespace Game
 
         [Inject] IGameManager _gameManager =default;
         [Inject] private ISoundManager _soundManager = default;
-
-
-        void Start()
+        
+        
+        protected override void OnEnable()
         {
-            _saveFilePath = Application.persistentDataPath + "/Data.save";
-            _saveFile = new SaveFile();
-            
+            base.OnEnable();
+            Observe(state.OnActivate);
+            //Observe(state.OnUpdate);
+        }
+        void IOnStateActivate.Do()
+        {
             _settingsFilePath = Application.persistentDataPath + "/Settings.save";
             _settingsFile = new SettingsFile();
-
             LoadSettings();
+            
+            _saveFilePath = Application.persistentDataPath + "/Data.save";
+            _saveFile = new SaveFile();
         }
 
         public void SaveGame()
