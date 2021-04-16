@@ -66,7 +66,7 @@ namespace Game
 
         void Start()
         {
-            Invoke("StartNewDay", 0.05f);
+            Invoke("StartNewDay", 0.1f);
         }
 
         void IOnUpdate.Do(float deltaTime)

@@ -185,15 +185,16 @@ namespace Game
                     Debug.LogWarning("Settings file was malformed.\n" + dataAsJson);
                     return;
                 }
-
-                _localizationManager.CurrentLanguage = (Language)_settingsFile.CurrentLanguage;
-                CurrentGraficsPreset = _settingsFile.GraficsPreset;
+                
                 MusicVolume = _settingsFile.MusicVolume;
                 SoundVolume = _settingsFile.SoundVolume;
                 
                 _soundManager.GetChannel("Music").Volume = MusicVolume;
                 _soundManager.GetChannel("Sfx").Volume = SoundVolume;
-           
+
+                _localizationManager.CurrentLanguage = (Language)_settingsFile.CurrentLanguage;
+                CurrentGraficsPreset = _settingsFile.GraficsPreset;
+               
                 Debug.Log("Settings was loaded");
 
                 foreach (var observer in OnLoadSettings.Enumerate())
